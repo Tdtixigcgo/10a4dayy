@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Chúc mừng 20/10 nhé các ngdepp </title>
+<title>Chúc mừng 20/10 nhé các ngdepp</title>
 <style>
   body{
     margin:0;height:100vh;
@@ -42,7 +42,6 @@
     transition:0.25s;
   }
   button:hover{transform:scale(1.05);}
-  /* hoa rơi */
   .flower{
     position:absolute;font-size:24px;opacity:0.8;
     animation:fall linear forwards;
@@ -56,16 +55,16 @@
 <body>
   <div class="card">
     <h1>🌸 Chúc mừng 20/10 vui vẻ 🌸</h1>
-    <h2>Gửi đến tất cả các bạn nữ 10A1 </h2>
+    <h2>Gửi đến tất cả các bạn nữ 10A4</h2>
     <div class="message" id="msg">Ấn nút bên dưới để nhận lời chúc 💌</div>
-    <button onclick="showWish()">Mở ra đii! </button>
+    <button onclick="showWish()">Mở ra đii!</button>
     <div class="heart">❤</div>
-    <footer> kamen rider đến từ 10A4  </footer>
+    <footer>kamen rider đến từ 10A4<br>Copyright by Qtuan & Cthang</footer>
   </div>
 
 <script>
   const wishes = [
-     "Chúc các bạn nữ luôn xinh đẹp, rạng rỡ như hoa mùa xuân 🌷",
+    "Chúc các bạn nữ luôn xinh đẹp, rạng rỡ như hoa mùa xuân 🌷",
     "Chúc các bạn luôn học giỏi, đạt nhiều thành tích xuất sắc 📚✨",
     "Chúc nụ cười luôn nở trên môi, niềm vui tràn ngập mỗi ngày 😍",
     "Mong rằng mọi ước mơ của các bạn sẽ sớm thành hiện thực 🌟",
@@ -116,25 +115,26 @@
     "Chúc tâm hồn bạn luôn như vườn hoa đang nở, đầy hương sắc và hi vọng 🌷",
     "Chúc 20/10 mang đến cho bạn những khoảnh khắc không thể quên 💖",
     "Chúc bạn được sống giữa người thương, được nghe những lời thật lòng 🌸",
-    "Chúc bạn luôn là chính mình – rực rỡ, tự do, và chân thành 🌞",
+    "Chúc bạn luôn là chính mình – rực rỡ, tự do, và chân thành 🌞"
   ];
+
   function showWish(){
-    const msg=document.getElementById("msg");
-const random = wishes[Math.floor(Math.random()*wishes.length)];
+    const msg = document.getElementById("msg");
+    const random = wishes[Math.floor(Math.random() * wishes.length)];
     msg.innerHTML = random;
   }
-  // hiệu ứng hoa rơi
-  const flowers=["🌸","🌺","🌼","💮","🌹","🌷","🥀"];
+
+  const flowers = ["🌸","🌺","🌼","💮","🌹","🌷","🥀"];
   function createFlower(){
-    const f=document.createElement("div");
-    f.className="flower";
-    f.innerText=flowers[Math.floor(Math.random()*flowers.length)];
-    f.style.left=Math.random()*100+"vw";
-    f.style.animationDuration=(6+Math.random()*3  )+"s";
+    const f = document.createElement("div");
+    f.className = "flower";
+    f.innerText = flowers[Math.floor(Math.random() * flowers.length)];
+    f.style.left = Math.random() * 100 + "vw";
+    f.style.animationDuration = (6 + Math.random() * 3) + "s";
     document.body.appendChild(f);
-    setTimeout(()=>f.remove(),100000 );
+    setTimeout(() => f.remove(), 10000);
   }
-  setInterval(createFlower,600);
+  setInterval(createFlower, 600);
 </script>
 </body>
 </html>
